@@ -1,0 +1,10 @@
+// REM Font Size Conversion
+
+@mixin font-size($sizeValue) {
+  $remValue: ($sizeValue / 10);
+  $pxValue: $sizeValue;
+  font-size: $pxValue+px;
+  font-size: $remValue+rem; // scss-lint:disable DuplicateProperty
+}
+
+// Example Usage - @include font-size(24);

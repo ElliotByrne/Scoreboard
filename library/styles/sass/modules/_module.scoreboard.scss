@@ -1,0 +1,162 @@
+#scoreboard-container {
+  overflow: hidden;
+}
+
+.scoreboard {
+  width: 100%;
+
+  &__header {
+    background-color: $black;
+    text-transform: uppercase;
+    color: $white;
+    text-align: center;
+    font-family: $primaryFont;
+    letter-spacing: 1px;
+    font-size: 18px;
+    padding: 15px 15px 15px;
+    overflow: hidden;
+
+    h1 {
+      margin: 0 0 15px;
+      padding-bottom: 15px;
+      float: left;
+      text-align: center;
+      width: 100%;
+      border-bottom: 1px solid $gallery;
+    }
+  }
+
+  &__players {
+    background-color: $gallery;
+    width: 100%;
+  }
+
+  &__player {
+    padding: 10px 0px;
+    border-bottom: 1px solid $black;
+    background-color: $gallery;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__player-remove {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: red;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  &__player-name {
+    font-family: $secondaryFont;
+    font-size: 16px;
+    padding: 0 0 0 45px;
+    margin-top: 15px;
+    display: inline-block;
+
+    @include breakpoint(medium) {
+      font-size: 25px;
+    }
+  }
+
+  &__player-score {
+    padding: 0;
+    text-align: right;
+    display: inline-block;
+    float: right;
+  }
+
+  &__score {
+    display: inline-block;
+    background-color: $black;
+    font-family: $primaryFont;
+    font-size: 20px;
+    color: $white;
+    padding: 15px;
+    min-width: 50px;
+    text-align: center;
+  }
+
+  &__button {
+    border: none;
+    outline: none;
+    height: 100%;
+    padding: 15px;
+    font-family: $primaryFont;
+    font-size: 20px;
+    color: $white;
+    cursor: pointer;
+
+    &--decrement {
+      background-color: $red;
+    }
+
+    &--increment {
+      background-color: $green;
+    }
+  }
+
+  &__stopwatch {
+    padding: 0;
+    text-align: right;
+
+    h2 {
+      font-size: 18px;
+      margin: 0;
+    }
+    
+    button {
+
+    }
+  }
+
+  &__stopwatch-time {
+    
+  }
+
+  &__stats {
+    padding: 0;
+    text-align: left;
+
+    tr {
+      td {
+        &:last-child {
+          min-width: 40px;
+        }
+      }
+    }
+  }
+
+  &__add-player {
+    background-color: $black;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+    padding: 20px 15px;
+    text-align: center;
+
+    form {
+      input {
+        height: 25px;
+        width: 60%;
+        font-size: 18px;
+        padding: 0 15px;
+        display: inline-block;
+      }
+
+      input[type=submit] {
+        width: auto;
+        height: 28px;
+        border: none;
+        outline: none;
+        font-family: $secondaryFont;
+        font-size: 20px;
+        padding: 0px 15px;
+        background-color: $green;
+        color: $white;
+      }
+    }
+  }
+}
